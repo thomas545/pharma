@@ -1,0 +1,66 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+    <title>Go Pharma | Laboratory for the future</title>
+    <link rel="icon" type="image/x-icon" href="/imgs/lab_bg_hd.jpg">
+
+    <meta name='robots' content='noindex,follow' />
+
+    {% include "base/css.html" %}
+    {% include "base/js_header.html" %}
+</head>
+
+<body data-rsssl=1 class="home page page-id-206 page-parent page-template-default">
+    <div id="bbar-wrapper">
+        <div id="bbar-body">
+            <div class="container">
+                <div class="column dt-sc-one-half first"></div>
+                <div class="column dt-sc-one-half alignright"></div>
+            </div>
+        </div>
+    </div><!-- **Wrapper** -->
+    <div class="wrapper">
+        <!-- **Inner Wrapper** -->
+        <div class="inner-wrapper">
+
+            <!-- Header Wrapper -->
+            <div id="header-wrapper">
+
+                <!-- **Header** -->
+                {% include "base/navbar.html" %}
+                <!-- **Header - End** -->
+
+            </div><!-- Header Wrapper -->
+
+            <!-- **Main** -->
+              <!-- Start Messages -->
+                {% if messages %}
+                <ul class="alert alert-success" role="alert">
+                  {% for message in messages %}
+                  <li{% if message.tags %} class='{{ message.tags }}'{% endif %}>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              <!-- End Messages -->
+
+            <!-- start block area -->
+
+                {% block content %}
+
+                {% endblock %}
+              <!-- **Main - End** -->
+        </div><!-- **Inner Wrapper - End** -->
+    </div><!-- **Wrapper - End** -->
+
+    <!-- **Footer** -->
+    {% include "base/footer.html" %}
+    <!-- **Footer - End** -->
+
+    {% include "base/js_footer.html" %}
+</body>
+
+</html>
