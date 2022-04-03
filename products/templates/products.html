@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- **Main** -->
+<div id="main">
+    <!-- **Breadcrumb** -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="https://www.kenwoo-pharma.com">Home</a><span class='fa fa-angle-double-right'>
+                </span>
+                <h1>Our Products</h1>
+            </div><!-- ** breadcrumb - End -->
+            <!-- **Searchform** -->
+
+            <form method="get" id="searchform" action="https://www.kenwoo-pharma.com">
+                <input id="s" name="s" type="text" value="Enter Keyword" class="text_input"
+                    onblur="if(this.value==''){this.value='Enter Keyword';}"
+                    onfocus="if(this.value =='Enter Keyword') {this.value=''; }" />
+                <input name="submit" type="submit" value="Go" />
+            </form><!-- **Searchform - End** -->
+        </div>
+    </section><!-- **Breadcrumb** -->
+    <div class="container">
+        <!-- **Primary Section** -->
+        <section id="primary" class="content-full-width">
+            <!-- #post-211 -->
+            <div id="post-211" class="post-211 page type-page status-publish hentry">
+            </div><!-- #post-211 -->
+
+
+            <!-- ** Portfolio Item Loop Begin ** -->
+            <div class="dt-sc-sorting-container">
+                <a href="#" class="active-sort" title="" data-filter=".all-sort">All</a>
+                <a href='#' data-filter=".10ml-injections-sort">10ml Injections</a>
+                <a href='#' data-filter=".1ml-injections-sort">1ml Injections</a>
+                <a href='#' data-filter=".tablets-sort">Tablets</a>
+            </div>
+
+            <!-- **Portfolio Container** -->
+            <div class="dt-sc-portfolio-container gallery">
+                <!-- Portfolio Item -->
+                <div id="portfolio-922" class=" portfolio dt-sc-one-third  all-sort  1ml-injections-sort ">
+                    <div class="portfolio-thumb"><img width="420" height="283"
+                            src="https://www.kenwoo-pharma.com/wp-content/uploads/2016/09/boldenone-undecylenate-420x283.jpg"
+                            class="attachment-dt-portfolio-small size-dt-portfolio-small wp-post-image"
+                            alt="boldenone-undecylenate"
+                            srcset="https://www.kenwoo-pharma.com/wp-content/uploads/2016/09/boldenone-undecylenate-420x283.jpg 420w, https://www.kenwoo-pharma.com/wp-content/uploads/2016/09/boldenone-undecylenate-1060x713.jpg 1060w, https://www.kenwoo-pharma.com/wp-content/uploads/2016/09/boldenone-undecylenate-790x531.jpg 790w, https://www.kenwoo-pharma.com/wp-content/uploads/2016/09/boldenone-undecylenate-520x350.jpg 520w"
+                            sizes="(max-width: 420px) 100vw, 420px" />
+                        <div class="image-overlay">
+                            <a href="https://www.kenwoo-pharma.com/wp-content/uploads/2016/09/boldenone-undecylenate.jpg"
+                                data-gal="prettyPhoto[gallery]" title="" class="zoom"> <span
+                                    class="fa fa-arrows-alt"></span> </a>
+                            <a href="product_detail.html" title="Boldenone Undecylenate 1ml" class="link">
+                                <span class="fa fa-external-link"> </span> </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-detail">
+                        <h5><a href="product_detail.html" title="Boldenone Undecylenate 1ml">Boldenone
+                                Undecylenate 1ml</a></h5>
+                        <p>Each ml of product contains: Boldenone Undecylenate 400mg.</p>
+                    </div>
+                </div><!-- Portfolio Item End-->
+
+            </div><!-- **Portfolio Section Container End** -->
+
+            <div class="clear"></div>
+            <div class="hr-invisible-small"> </div>
+
+            <!-- **Pagination** -->
+            <div class="pagination">
+                <div class="prev-post"></div>
+                <div class="next-post"></div>
+            </div><!-- **Pagination - End** -->
+
+
+            <!-- ** Portfolio Item Loop End ** -->
+        </section>
+
+
+    </div><!-- **Container - End** -->
+</div><!-- **Main - End** -->
+
+{% endblock %}

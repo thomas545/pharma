@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- **Main** -->
+<div id="main">
+    <!-- **Breadcrumb** -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a><span class='fa fa-angle-double-right'>
+                </span>
+                <h1>About us</h1>
+            </div><!-- ** breadcrumb - End -->
+            <!-- **Searchform** -->
+
+            <form method="get" id="searchform" action="/">
+                <input id="s" name="s" type="text" value="Enter Keyword" class="text_input"
+                    onblur="if(this.value==''){this.value='Enter Keyword';}"
+                    onfocus="if(this.value =='Enter Keyword') {this.value=''; }" />
+                <input name="submit" type="submit" value="Go" />
+            </form><!-- **Searchform - End** -->
+        </div>
+    </section><!-- **Breadcrumb** -->
+    <div class="container">
+        <!-- **Primary Section** -->
+        <section id="primary" class="content-full-width">
+            <!-- #post-8 -->
+            <div id="post-8" class="post-8 page type-page status-publish hentry">
+                <div class='column dt-sc-full-width   first'><b>Kenwoo-Pharma</b> has a commitment to
+                    mankind, a commitment of improving the quality of life for each and every individual
+                    through which we constantly strive to innovate, improve and increase the availability of
+                    cost-efficient generic medicines to the global market.
+                    We believe that medicine should be available to all people regardless of their location,
+                    and affordable for them at any income level such that the cost of medical treatment
+                    should not be a concern for any part of the population. </p>
+                    <p>Through our commitment we have chosen to focus our resources on generic medicines in
+                        which field we aim to increase the availability of our quality medicines and
+                        increase global awareness of the vast financial savings offered to society by making
+                        generic medicines available to the general population.
+                </div>
+                <div class="dt-sc-clear"></div>
+                <div class='dt-sc-hr-invisible  '></div>
+                <div class='column dt-sc-one-half   first'>
+                    <h2 class=''>Product efficiency</h2>
+                </div>
+                <div class='column dt-sc-one-half   '>
+                    <h2 class=''>Our Production Areas</h2>
+                </div>
+                <div class='column dt-sc-one-fourth   first'>
+                    <div class="dt-sc-infographic-bar"><i class='fa fa-male' style='font-size:px; color:;'>
+                        </i>
+                        <div class="info">
+                            <div class='dt-sc-progress dt-sc-standard'>
+                                <div data-value=97 style='background-color:;' class='dt-sc-bar'></div>
+                            </div>
+                            <div class='dt-sc-bar-percentage'> <span> 97% </span> </div>
+                            <div class='dt-sc-bar-text'>
+                                <p>Medication efficiency for men.</p>
+                                <p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='column dt-sc-one-fourth   '>
+                    <div class="dt-sc-infographic-bar"><i class='fa fa-female'
+                            style='font-size:px; color:;'> </i>
+                        <div class="info">
+                            <div class='dt-sc-progress dt-sc-standard'>
+                                <div data-value=96 style='background-color:;' class='dt-sc-bar'></div>
+                            </div>
+                            <div class='dt-sc-bar-percentage'> <span> 96% </span> </div>
+                            <div class='dt-sc-bar-text'>
+                                <p>Medication efficiency for women.</p>
+                                <p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='column dt-sc-one-half   '>
+                    <div class='dt-sc-donutchart-small'>
+                        <div class='dt-sc-donutchart' data-size='100' data-percent='37'
+                            data-bgcolor='#808080' data-fgcolor='#4bbcd7'></div>
+                        <h5 class='dt-sc-donutchart-title'>Hormone</h5>
+                    </div>
+                    <div class='dt-sc-donutchart-small'>
+                        <div class='dt-sc-donutchart' data-size='100' data-percent='22'
+                            data-bgcolor='#808080' data-fgcolor='#4bbcd7'></div>
+                        <h5 class='dt-sc-donutchart-title'>Heart</h5>
+                    </div>
+                    <div class='dt-sc-donutchart-small'>
+                        <div class='dt-sc-donutchart' data-size='100' data-percent='18'
+                            data-bgcolor='#808080' data-fgcolor='#4bbcd7'></div>
+                        <h5 class='dt-sc-donutchart-title'>Neuro</h5>
+                    </div>
+                    <div class='dt-sc-donutchart-small'>
+                        <div class='dt-sc-donutchart' data-size='100' data-percent='23'
+                            data-bgcolor='#808080' data-fgcolor='#4bbcd7'></div>
+                        <h5 class='dt-sc-donutchart-title'>Pain</h5>
+                    </div>
+                </div>
+                <div class="dt-sc-clear"></div>
+                <div class='dt-sc-hr-invisible  '></div>
+                <div class="social-bookmark"></div>
+                <div class="social-share"></div>
+            </div><!-- #post-8 -->
+
+
+        </section><!-- **Primary Section** -->
+
+
+    </div><!-- **Container - End** -->
+</div><!-- **Main - End** -->
+
+{% endblock %}
