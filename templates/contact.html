@@ -8,13 +8,13 @@
                 <section class="breadcrumb-section">
                     <div class="container">
                         <div class="breadcrumb">
-                            <a href="https://www.kenwoo-pharma.com">Home</a><span class='fa fa-angle-double-right'>
+                            <a href="/">Home</a><span class='fa fa-angle-double-right'>
                             </span>
                             <h1>Contact</h1>
                         </div><!-- ** breadcrumb - End -->
                         <!-- **Searchform** -->
 
-                        <form method="get" id="searchform" action="https://www.kenwoo-pharma.com">
+                        <form method="get" id="searchform" action="/">
                             <input id="s" name="s" type="text" value="Enter Keyword" class="text_input"
                                 onblur="if(this.value==''){this.value='Enter Keyword';}"
                                 onfocus="if(this.value =='Enter Keyword') {this.value=''; }" />
@@ -33,6 +33,7 @@
                                     <div class="screen-reader-response"></div>
                                     <form action="/contact/#wpcf7-f554-p64-o1" method="post" class="wpcf7-form"
                                         novalidate="novalidate">
+                                        {% csrf_token %}
                                         <div style="display: none;">
                                             <input type="hidden" name="_wpcf7" value="554" />
                                             <input type="hidden" name="_wpcf7_version" value="4.5" />
@@ -73,20 +74,6 @@
                                         </p>
                                         <div class="clear"> </div>
                                         <div class="hr-invisible-very-small"> </div>
-                                        <div class="column dt-sc-one-half first">
-                                            <p> <label> Enter security code <span> (required) </span> <input
-                                                        type="hidden" name="_wpcf7_captcha_challenge_captcha-1"
-                                                        value="2563723831" /><img
-                                                        class="wpcf7-form-control wpcf7-captchac wpcf7-captcha-captcha-1"
-                                                        width="72" height="24" alt="captcha"
-                                                        src="https://www.kenwoo-pharma.com/wp-content/uploads/wpcf7_captcha/2563723831.png" /></label>
-                                                <br>
-                                                <span class="wpcf7-form-control-wrap captcha-1"><input type="text"
-                                                        name="captcha-1" value="" size="40"
-                                                        class="wpcf7-form-control wpcf7-captchar" autocomplete="off"
-                                                        aria-invalid="false" /></span>
-                                            </p>
-                                        </div>
                                         <div class="column dt-sc-one-half">
                                             <p>&nbsp; <br><input type="submit" value="Send"
                                                     class="wpcf7-form-control wpcf7-submit" /></p>
@@ -104,7 +91,7 @@
                                 <p class="dt-sc-contact-info"><i class='fa fa-phone'></i>Phone :
                                     <span>+91-2242911001</span></p>
                                 <p class="dt-sc-contact-info"><i class='fa fa-envelope-o'></i>Email : <a
-                                        href='mailto:info@kenwoo-pharma.com'>info@kenwoo-pharma.com</a></p>
+                                        href='mailto:info@go-pharma.com'>info@go-pharma.com</a></p>
                                 <div class="dt-sc-clear"></div>
                             </div>
                             <div class="social-bookmark"></div>
