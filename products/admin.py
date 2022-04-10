@@ -4,9 +4,9 @@ from import_export.admin import ImportExportModelAdmin
 from .models import Category, Product, SKU, Generation
 
 
-admin.site.site_header = "Go-pharma Admin"
-admin.site.site_title = "Go-pharma Admin"
-admin.site.index_title = "Go-pharma Administration"
+admin.site.site_header = "Pro-pharma Admin"
+admin.site.site_title = "Pro-pharma Admin"
+admin.site.index_title = "Pro-pharma Administration"
 admin.empty_value_display = "**Empty**"
 
 
