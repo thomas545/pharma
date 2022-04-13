@@ -525,7 +525,7 @@ Text Domain: dt_themes
 		.portfolio-carousel-wrapper .carousel-arrows { right:5px; }
 		
 		.portfolio { float:left; border-bottom:3px solid #d9d9d9; padding:0px; margin-bottom:20px; -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; }
-		.dt-sc-portfolio-container .portfolio { margin:10px 0px 10px 0px; }
+		.dt-sc-portfolio-container .portfolio { margin:10px 0px 10px 14px; }
 		
 		.portfolio.last { margin-right:0px; }
 		
