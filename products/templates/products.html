@@ -60,7 +60,7 @@
 
                         <div class="portfolio-detail">
                             <h5><a href="{% url 'product_detail' product.pk%}" title="Boldenone Undecylenate 1ml">{{product.name}}</a></h5>
-                            <p>{{product.description}}</p>
+                            <p>{{product.description | truncatechars:30 }}</p>
                         </div>
                     </div>
                     <!-- Portfolio Item End-->
