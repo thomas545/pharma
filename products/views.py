@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.contrib import messages
 from django.db.models import Q
 from .models import Category, Product, SKU
 
@@ -41,17 +40,20 @@ def product_detail(request, pk):
 def check_product(request):
     qs = SKU.objects.all()
     message = ""
+    product = None
     serial = request.GET.get("serial", None)
 
     if serial != "" and serial is not None:
         new_qs = qs.filter(Q(serial_number__iexact=serial))
         if new_qs:
             message = "Your Product Is Correct"
+            product = new_qs.first().product
         else:
             message = "wrong"
 
     context = {
         "queryset": qs,
+        "product": product,
         "serial": serial,
         "message": message,
     }

@@ -2,102 +2,108 @@
 {% load static %}
 {% block content %}
 
-            <!-- **Main** -->
-            <div id="main">
-                <!-- **Breadcrumb** -->
-                <section class="breadcrumb-section">
-                    <div class="container">
-                        <div class="breadcrumb">
-                            <a href="/">Home</a><span class='fa fa-angle-double-right'>
-                            </span>
-                            <h1>Anti-Counterfeit</h1>
-                        </div><!-- ** breadcrumb - End -->
-                        <!-- **Searchform** -->
+<!-- **Main** -->
+<div id="main">
+    <!-- **Breadcrumb** -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a><span class='fa fa-angle-double-right'>
+                </span>
+                <h1>Anti-Counterfeit</h1>
+            </div><!-- ** breadcrumb - End -->
+            <!-- **Searchform** -->
 
-                        <form method="get" id="searchform" action="/">
-                            <input id="s" name="s" type="text" value="Enter Keyword" class="text_input"
-                                onblur="if(this.value==''){this.value='Enter Keyword';}"
-                                onfocus="if(this.value =='Enter Keyword') {this.value=''; }" />
-                            <input name="submit" type="submit" value="Go" />
-                        </form><!-- **Searchform - End** -->
+            <form method="get" id="searchform" action="/">
+                <input id="s" name="s" type="text" value="Enter Keyword" class="text_input"
+                    onblur="if(this.value==''){this.value='Enter Keyword';}"
+                    onfocus="if(this.value =='Enter Keyword') {this.value=''; }" />
+                <input name="submit" type="submit" value="Go" />
+            </form><!-- **Searchform - End** -->
+        </div>
+    </section><!-- **Breadcrumb** -->
+    <div class="container">
+        <!-- **Primary Section** -->
+        <section id="primary" class="content-full-width">
+
+            <form method="get" action=".">
+
+                <div class="column dt-sc-full-width   first">
+                    <p>Each product has a serial number which is visible and a security code which needs to
+                        be scratched. Security code needs to be entered on the authentication system to
+                        authenticate the authenticity of a product.
+                    </p>
+                    <p>Any product that does not authenticate through our system is a counterfeit and must
+                        be destroyed or returned to the pharmacy or distributor.
+                    </p>
+                    <p> Enter the 9 character Authenticity code in the fields to verify if your product is
+                        genuine: </p>
+                </div>
+
+
+                <div class="column dt-sc-one-third first">
+
+
+                    <div class="column dt-sc-one-third first">
+                        <span class="wpcf7-form-control-wrap">
+                            <input type="text" name="serial" value="" maxlength="30" size="40"
+                                style="font-size: 20px;padding: 5px 20px; width: 100px;"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
+                                aria-invalid="false"></span>
                     </div>
-                </section><!-- **Breadcrumb** -->
-                <div class="container">
-                    <!-- **Primary Section** -->
-                    <section id="primary" class="content-full-width">
 
-                        <form method="get" action=".">
-
-                            <div class="column dt-sc-full-width   first">
-                                <p>Each product has a serial number which is visible and a security code which needs to
-                                    be scratched. Security code needs to be entered on the authentication system to
-                                    authenticate the authenticity of a product.
-                                </p>
-                                <p>Any product that does not authenticate through our system is a counterfeit and must
-                                    be destroyed or returned to the pharmacy or distributor.
-                                </p>
-                                <p> Enter the 9 character Authenticity code in the fields to verify if your product is
-                                    genuine: </p>
-                            </div>
+                </div>
+                <div class="clear"></div>
 
 
-                            <div class="column dt-sc-one-third first">
+                <div class="clear"></div>
+                <div class="column dt-sc-one-third first">
+                    <div class="column dt-sc-one-third">
+                        <span class="wpcf7-form-control-wrap"><input type="submit" name="op" id="check-submit"
+                                value="Check"></span>
+                    </div>
+                </div>
 
+                <div class="clear"></div>
 
-                                <div class="column dt-sc-one-third first">
-                                    <span class="wpcf7-form-control-wrap">
-                                        <input type="text" name="serial" value=""
-                                            maxlength="30" size="40"
-                                            style="font-size: 20px;padding: 5px 20px; width: 100px;"
-                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                            aria-required="true" aria-invalid="false"></span>
-                                </div>
-
-                            </div>
-                            <div class="clear"></div>
-
-
-                            <div class="clear"></div>
-                            <div class="column dt-sc-one-third first">
-                                <div class="column dt-sc-one-third">
-                                    <span class="wpcf7-form-control-wrap"><input type="submit" name="op"
-                                            id="check-submit" value="Check"></span>
-                                </div>
-                            </div>
-
-                            <div class="clear"></div>
-
-                            <div class="column dt-sc-one-third first">
-                                <span class="wpcf7-form-control-wrap"></span>
-                            </div>
+                <div class="column dt-sc-one-third first">
+                    <span class="wpcf7-form-control-wrap"></span>
+                </div>
 
 
 
 
-                        </form>
+            </form>
 
-                        {% if message and message != "wrong" %}
-                        <div class="breadcrumb">
-                            </span>
-                            <h1 style="background-color: green;">{{message}} 👏 🥳</h1>
-                        </div>
-                        {% endif %}
-
-                        {% if message == "wrong" %}
-                        <div class="breadcrumb">
-                            </span>
-                            <h1 style="background-color: red;">Your Product Is Incorrect 😟</h1>
-                        </div>
-                        {% endif %}
-
-                        <div class="clear"></div>
-
-                    </section><!-- **Primary Section** -->
+            {% if message and message != "wrong" and product %}
+            <div class="breadcrumb">
+                </span>
+                <h1 style="background-color: green;">{{message}} 👏 🥳</h1>
+                <div class="column dt-sc-two-third first" style="margin-top: 30px;">
+                    <ul class="portfolio-slider">
+                        <li> <img src='{{product.image.url}}' alt='' title='' /></li>
+                    </ul>
+                </div>
 
 
-                </div><!-- **Container - End** -->
             </div>
-            <!-- **Main - End** -->
+            {% endif %}
+
+            {% if message == "wrong" %}
+            <div class="breadcrumb">
+                </span>
+                <h1 style="background-color: red;">Your Product Is Incorrect 😟</h1>
+            </div>
+            {% endif %}
+
+            <div class="clear"></div>
+
+        </section><!-- **Primary Section** -->
+
+
+    </div><!-- **Container - End** -->
+</div>
+<!-- **Main - End** -->
 
 
 {% endblock %}
